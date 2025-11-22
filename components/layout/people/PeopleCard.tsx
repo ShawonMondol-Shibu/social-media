@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Item,
   ItemContent,
@@ -5,15 +6,18 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item";
-import { UserCircle } from "lucide-react";
+import { AvatarImage } from "@radix-ui/react-avatar";
 import React from "react";
 
 export default function PeopleCard() {
   return (
     <>
-      <Item variant={"outline"} className="mx-auto w-lg">
+      <Item variant={"muted"} className="mx-auto w-lg">
         <ItemMedia>
-          <UserCircle size={50}/>
+          <Avatar>
+            <AvatarImage src={'https://xsgames.co/randomusers/avatar.php?g=male'} alt=""/>
+            <AvatarFallback>User</AvatarFallback>
+          </Avatar>
         </ItemMedia>
         <ItemContent>
           <ItemTitle>Shawon</ItemTitle>

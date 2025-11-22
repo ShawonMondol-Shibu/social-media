@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { CgInfinity } from "react-icons/cg";
+import { Button } from "../ui/button";
+import { Plus } from "lucide-react";
 
 export default function Navbar() {
   const navLinks = [
@@ -18,6 +20,10 @@ export default function Navbar() {
             {nav.name}
           </Link>
         ))}
+      <Button variant={'outline'} size={'sm'}>
+        Post
+        <Plus/>
+        </Button>
       </div>
       <Avatar>
         <AvatarImage
